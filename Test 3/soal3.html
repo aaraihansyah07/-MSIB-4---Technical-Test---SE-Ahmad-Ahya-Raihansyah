@@ -1,1 +1,602 @@
+<HTML>
+	<head>
+		<link href='https://fonts.googleapis.com/css?family=Poppins' rel='stylesheet'>
+		<style>
+			#nav a { text-decoration: none; } 
+			#nav { background:white; width:100%; height:18%; z-index:1;} 
+			.nav_ul { background: none; list-style: none; margin:0 21%; width:60%} 
+			.nav_ul li { color: #fff; background: white; display: block; float: left; padding: 1rem; position: relative; text-decoration: none; transition-duration: 0.5s; }
+			.nav_ul li:hover { background: white; cursor: pointer; border-bottom:2px solid #28A0F6}  
+			.nav_ul li a {color:#353D49; font-weight:bold;} 
+			.nav_ul li a:hover {color:#28A0F6; font-weight:bold;} 
+			.dropdown { background: none; visibility: hidden; opacity: 0; position: absolute; transition: all 0.5s ease; margin-top: 1rem; left: 0; display: none; width:100%;} 
+			.nav_ul li:hover > ul, 
+			.nav_ul li:focus-within > ul
+			.dropdown:hover { background:white; position: absolute; transition: all 0.5s ease; margin-top: 1rem; right: 10; visibility: visible; opacity: 1; display: block; } 
+			.dropdown li { background:white; clear: both; width: 200%; margin-left:-77%} 
+			.dropdown li:hover { background:#28A0F6; clear: both; width: 200%; margin-left:-77% } 
+			.dropdown li a { color:#353D49; margin-left:-5px; font-size:14px; font-weight:bold;} 
+			.dropdown li a:hover { color:white; font-weight:bold;}
+			#nav img {margin-top:10px; float:left; margin-top:2%; margin-left:6%;}
+			.tombol a {font-family:sans-serif; font-weight:bold; padding:1% 2%; border-radius:8px; float:right; background:#28A0F6; margin-right:10%; margin-top:1%; text-decoration:none; color:white;}
+			.tombol a:hover {font-family:sans-serif; font-weight:bold; padding:1% 2%; border-radius:8px; float:right; background:#FF8B49; margin-right:10%; margin-top:1%; color:white}
 
+
+			body {margin:0 auto; background:white; font-family:"Poppins", sans-serif;}
+			a {font-family:"Poppins", sans-serif;}
+
+
+
+			#desc {background:#FF8B49; text-align:center; font-family:"Poppins", sans-serif; font-size:small; padding:0.3% 0; color: white; margin-top:0;}
+
+
+			#header {background:none; position:relative; width:100%; height:130%; margin-top:-1.1%}
+			.sticky { position: fixed; top: 0; width: 100%;}
+			.dalemheader {position:absolute; top:0; background:black; width:100%; height:85%; opacity:0.6;}
+			.isiheader {position:absolute; top:0; background:none; width:100%; height:85}
+			.isiheader p {color:white; margin-left:5%; font-family:"Poppins", sans-serif; font-size:50px; font-weight:bold;}
+			.isiheader .rincian {font-size:15px; font-weight:normal; margin-top:-3%;}
+			.tombol2 a {font-family:sans-serif; font-weight:bold; padding:1.5% 2%; border-radius:8px; float:left; background:#FF8B49; margin-left:5%;margin-top:2%; color:white; text-decoration:none;}
+			.blink { animation: blink 0.5s infinite; } 
+			@keyframes blink{ to { opacity: .0; } } 
+			.kontainer_custom { display: kontainer_custom; }
+			.hapus_custom {color:#54595F}
+
+
+			#software_business {margin-top:-5%;}
+			.example1 { height: 50px; overflow: hidden; position: relative; } 
+			.example1 h3 { position: absolute; width: 100%; height: 100%; margin: 0; line-height: 50px; text-align: center; /* Starting position */ -moz-transform:translateX(100%); -webkit-transform:translateX(100%); transform:translateX(100%); /* Apply animation to this element */ -moz-animation: example1 10s linear infinite; -webkit-animation: example1 10s linear infinite; animation: example1 20s linear infinite; } /* Move it (define the animation) */ 
+				@-moz-keyframes example1 { 0%   { -moz-transform: translateX(100%); } 100% { -moz-transform: translateX(-100%); } } 
+				@-webkit-keyframes example1 { 0%   { -webkit-transform: translateX(100%); } 100% { -webkit-transform: translateX(-100%); } } 
+				@keyframes example1 { 0%   { -moz-transform: translateX(100%); /* Firefox bug fix */ -webkit-transform: translateX(100%); /* Firefox bug fix */ transform: translateX(100%); } 100% { -moz-transform: translateX(-100%); /* Firefox bug fix */ -webkit-transform: translateX(-100%); /* Firefox bug fix */ transform: translateX(-100%); } } 
+				.example1 h3:hover { -moz-animation-play-state: paused; -webkit-animation-play-state: paused; animation-play-state: paused; }
+
+
+				#services {margin-top:5%; margin-left:5%;}
+				.services_consult {margin-top:-2%;}
+				.tombol4 a {border: none; font-family:sans-serif;font-weight:bold; padding:1% 2%; border-radius:8px; float:right; background:#ffebe0; margin-right:1%; margin-top:2%; color:#FF8B49; text-decoration:none;}
+				.tombol4 a:hover {border: none; font-family:sans-serif; font-weight:bold; padding:1% 2%; border-radius:8px; float:right; background:#f2f2f2; margin-right:1%; margin-top:2%; color:#FF8B49; text-decoration:none;}
+				.tombol3 {border: none; font-family:sans-serif;font-weight:bold; padding:1% 2%; border-radius:8px; float:right; background:#ffebe0; margin-right:1%; margin-top:2%; color:#FF8B49; text-decoration:none;}
+				.tombol3:hover {border: none; font-family:sans-serif; font-weight:bold; padding:1% 2%; border-radius:8px; float:right; background:#f2f2f2; margin-right:1%; margin-top:2%; color:#FF8B49; text-decoration:none;}
+				.blink { animation: blink 0.5s infinite; } 
+
+				.bg_slider1 {background:none; width:95%; margin-top:10%; padding:2% 0px}
+				.bg_slider1 {overflow-x: auto; overflow-y: hidden; white-space: nowrap;}
+				.slider1 {display:inline-block; background:white; list-style:none; border:1px solid #cdcdcd;width:25%; padding:2%; border-radius:8px; margin-right:2%; white-space: pre-line;}
+				.slider1 p {font-size:14px; color:#b4b2b2}
+				.slider1 h2 {font-size:18px}
+				.slider1 a {color:#28A0F6; font-size:small; text-decoration:none; font-weight:bold;}
+
+				#portfolio {background:white; margin:5% 0% 5% 5%}
+				.portfolio {display:inline-block; background:white; list-style:none; border:none; width:96.5%; border-radius:8px; margin-top:5% auto;}
+				.isi_portfolio {display:inline-block; width:48%; margin-right:4.2%; margin-left:-3%; background:white}
+				.isi_portfolio .desc_konten_porto {font-size:18px; text-decoration:none; font-weight:bold; color: black}
+				.isi_portfolio p {font-size:15px; color: #b4b2b2}
+				.isi_portfolio a {font-size:15px; color:#28A0F6; text-decoration:none; font-weight:bold;}
+				.konten_portfolio {padding:15px 5px 5px 5px;}
+				.foto_portfolio img {width:100%; height:35%; border-radius:8px;}
+
+
+				#testi {background:#28a0f6; width:100%; position:relative;}
+				.testi_kiri {padding:2% 0% 10% 5%; width:47%; background:none; height:70%}
+				.testi_kiri h2 {color:white; font-weight:bold; font-size:35px;}
+				.tengah {position:relative}
+				.tengah p {color: white}
+				.tengah_isi {background:none; width:55%; position:absolute; left:0;}
+				.tengah_isi2 {background:none; width:45%; position:absolute; right:0;}
+				.tengah_isi3 {background:none; width:55%; position:absolute; left:0; top:130px}
+				.testi_kanan {position:absolute; top:15%; right: 5%;}
+
+
+				.bg_slider2 {background:none; width:95%; margin-top:10%; padding:0px}
+				.bg_slider2 {overflow-x: auto; overflow-y: hidden; white-space: nowrap}
+				.slider2 {display:inline-block; background:white; list-style:none; border:1px solid #cdcdcd;width:25%; padding:2% 1%; border-radius:8px; margin-right:2%; white-space: pre-line;}
+				.slider2 p {font-size:14px; color:#b4b2b2; margin-top:-5%; text-align:center;}
+				.slider2 h2 {font-size:18px}
+				.slider2 a {color:#28A0F6; font-size:small; text-decoration:none; font-weight:bold; text-align:center;}
+
+
+
+				#release {width:91%; background:white; margin:0 auto}
+				.media_release li {list-style:none; display:inline-block; margin-right:4%;}
+				.media_release img {width:170px;}
+
+				#meja {margin-top:10%; z-index:-1; width:100%; position:relative;}
+				.cover {opacity:0.7; width:100%; height:150px; position:absolute; top:0; left: 0; background:#4b88b3; color:none}
+
+
+				#contact {width:88%; height:123%; margin:0 auto; background:white; border-radius:8px; margin-top:-5%; border:1px solid silver; padding:2%}
+				.info {float:left; background:none; width:48%;}
+				.isian {float:right; background:none; width:48%; margin-top:2%;}
+				.isian1 p, .isian2 p {color: #7a7a7a}
+
+
+				#products {width:98.5%; margin-top:73%}
+				.products_nav {margin-top:-6%; margin-right:-8%; margin-top:-7%;}
+				.isi_products {overflow-x: auto; overflow-y: hidden; white-space: nowrap; margin-top:10%; margin-left:-2%; margin-right:-2%;}
+				.info_products {display:inline-block; background:#f2f2f2; list-style:none; border:none;width:17%; padding:1% 2%; border-radius:8px; margin-right:2%; white-space: pre-line;}
+				.info_products img {width:85%; height:5%;}
+
+
+
+				#certif {background:#e0e0e0; width:106.7%; margin-left:-8%; margin-top:7%; padding:2% 4%; height:25%;}
+				#certif p {float:left; background:none; width:45%; font-size:16px;}
+				#certif img {float:right; width:45%;}
+
+
+				#footer {background:#212731; width:106.7%; margin-left:-8%; padding:2% 4% 20%; height:25%; position:relative;}
+				#footer h2 {color: white; font-size:27px;}
+				#footer p {color: white}
+				#footer a {color:white; text-decoration:none;}
+				#footer a:hover {color:#FF8B49; text-decoration:none;}
+				#footer input[type=email] {width:300px; height:40px; border-radius:5px;}
+				.tombols a {font-family:sans-serif; font-weight:bold; padding:4%; border-radius:5px; float:left; background:#28A0F6; text-decoration:none; color:white; margin-top:3%;}
+				.tombols a:hover {font-family:sans-serif; font-weight:bold; padding:4%; border-radius:5px; float:left; background:#FF8B49; color:white; margin-top:3%;}
+				.footer1 {position:absolute; left:5%; top:10%}
+				.footer2 {position:absolute; right:20%; top:15%}
+				.footer3 {position:absolute; left:5%; bottom:12%;}
+				.footer4 {position:absolute; right:5%; bottom:5%; text-align:right;}
+				.footer4 img {width:10%}
+				.footer4 a,p {font-size:14px;}
+		</style>
+	</head>
+	<body>
+		<! --NAVIGASI-->
+		<div id="nav">
+			<a href='#'><img src='logo.png' width='100px'/></a>
+			<br>
+  			<ul class='nav_ul'>
+  				<li><a href="#">Home</a></li>
+   				<li><a href="#">Our Works</a>
+    			<li><a href="#">Services</a>
+     		 		<ul class="dropdown">
+        				<li><a href="#">Digital Consultancy</a></li>
+       					<li><a href="#">Application Modernization</a></li>
+      					<li><a href="#">Cloud Managed Service</a></li>
+      					<li><a href="#">Data and Machine Learning</a></li>
+      					<li><a href="#">Digital Workspace</a></li>
+      				</ul>
+    			</li>
+    			<li><a href="#">Careers</a>
+    			<li><a href="#">About</a>
+   				<li><a href="#">Blog</a>
+   				<li><a href="#">Insights</a>
+  			</ul>
+    		<li class='tombol' style='list-style:none'><a href='#'>Contact Us!</a></li>
+		</div>
+
+
+
+		<! --DESKRIPSI-->
+		<p id='desc'>Are you looking for education solution such as ZTE Chromebook, Google Workspace for Education, School Transformation? <a href='#' style='font-weight:bold; color:white'>Click here
+		</a></p>
+
+
+		<! --HEADER-->
+		<div id='header'>
+			<center><img src="header.jpeg" height="85%" width="95%"/></center>
+			<div class='dalemheader'></div>
+			<div class='isiheader'>
+				<br><br><br>
+				<div class='kontainer_custom'>
+					<p class='custom'>Custom <a class='isi_custom' id='isi_custom'></a><a class='hapus_custom' id='hapus_custom blink'>|</a></p>
+				</div>
+				<p style='margin-top:-5%;'>Development</p>
+				<p class='rincian'>GITS.id is your partner to achieve your business goals and improve your company productivity.</p>
+				<li class='tombol2' style='list-style:none;'><a href='#'>Consult with Us!</a></li>
+			</div>
+		</div>
+
+		
+		<! --SOFTWARE BUSINESS-->
+		<div id='software_business'>
+			<h2 style='font-size:22px; font-weight:bold; text-align:center'>Over 100+ software business scaling up with GITS.id</h2>
+			<div class='example1'>
+				<h3><img src='software_business.png' height='100%'/></h3>
+			</div>
+		</div>
+
+
+		<! --SERVICES-->
+		<div id='services'>
+			<p style='color:#28A0F6; font-weight:bold'>SERVICES</p>
+			<div class='services_consult'>
+				<h2 style='font-size:30px; font-weight:bold; text-align:left; float:left;'>Get the best IT Service & Solution</h2>
+				<button onclick='scrolll()' class='tombol3' style='list-style:none; margin-right:4%;'>→</li>
+				<button onclick='scrollr()' class='tombol3' style='list-style:none;'>←</li>
+			</div>
+			<ul class='bg_slider1'>
+				<li class='slider1'>
+					<img src='slider1/digital.png'/>
+					<h2>Digital Consultancy</h2>
+					<p>We can help finding what problems your app have or guiding you to start to have the best solution app for your company & your customer</p>
+					<a href='#'>Learn more</a>
+				</li>
+				<li class='slider1'>
+					<img src='slider1/app.png'/>
+					<h2>Application Modernization</h2>
+					<p>Modernize your app to be scalable, easy to be maintained, and be enriched<br><br><br></p>
+					<a href='#'>Learn more</a>
+				</li>
+				<li class='slider1'>
+					<img src='slider1/cloud.png'/>
+					<h2>Cloud Managed Service</h2>
+					<p>Secure your data and enable fast processing on application, to reduce cost and improve operational efficiency<br><br></p>
+					<a href='#'>Learn more</a>
+				</li>
+				<li class='slider1'>
+					<img src='slider1/data.png'/>
+					<h2>Data and MLearning</h2>
+					<p>We help on enable you to take better decisions based on your data. Have it managed and generate insights from it<br><br></p>
+					<a href='#'>Learn more</a>
+				</li>
+				<li class='slider1'>
+					<img src='slider1/Works.png'/>
+					<h2>Digital Workspace</h2>
+					<p>Flexible, secure and cost-effective innovation solutions, for teams and companies to achieve more.<br><br></p>
+					<a href='#'>Learn more</a>
+				</li>
+			</ul>			
+		</div>
+
+
+		<! --PORTFOLIO-->
+		<div id='portfolio'>
+			<p style='color:#FF8B49; font-weight:bold'>PORTFOLIO</p>
+			<div class='services_consult'>
+				<h2 style='font-size:30px; font-weight:bold; text-align:left; float:left;'>Customer Success Stories</h2>
+				<li class='tombol4' style='list-style:none; margin-right:4%'><a href='#' style='background:#eaf6fe; color:#28a0f6'>See All</a></li>
+			</div>
+			<ul class='portfolio'>
+				<li class='isi_portfolio'>
+					<div class='foto_portfolio'>
+						<a href='#'><img src="portfolio/1.png"/></a>
+					</div>
+					<div class='konten_portfolio'>
+						<a href='#' class='desc_konten_porto'>Distribution Get Better – BKKBN & John Snow Inc.</a>
+						<p>John Snow, Inc. and BKKBN birth control kit distribution gets better with Stokku and MIM Tool! Problem John Snow, Inc.</p>
+						<a href='#'>Read More ></a>
+					</div>
+				</li>
+				<li class='isi_portfolio'>
+					<div class='foto_portfolio'>
+						<a href='#'><img src="portfolio/2.png"/></a>
+					</div>
+					<div class='konten_portfolio'>
+						<a href='#' class='desc_konten_porto'>Flawlessly Used by 100K People at the Same Time –</a>
+						<p>The application is used by people across Indonesia. GITS Indonesia is very helpful, easy to reach, fast response, and give</p>
+						<a href='#'>Read More ></a>
+					</div>
+				</li>
+				<br><br><li class='isi_portfolio'>
+					<div class='foto_portfolio'>
+						<a href='#'><img src="portfolio/3.png"/></a>
+					</div>
+					<div class='konten_portfolio'>
+						<a href='#' class='desc_konten_porto'>Used by People Across Indonesia – Jasa Raharja</a>
+						<p>The application is used by people across Indonesia. GITS Indonesia is very helpful, easy to reach, fast response, and give</p>
+						<a href='#'>Read More ></a>
+					</div>
+				</li>
+				<li class='isi_portfolio'>
+					<div class='foto_portfolio'>
+						<a href='#'><img src="portfolio/4.png"/></a>
+					</div>
+					<div class='konten_portfolio'>
+						<a href='#' class='desc_konten_porto'>Top 1 Car Selling Company – Toyota Motor</a>
+						<p>Top 1 Car Selling Company in Indonesia “GITS Indonesia helps Toyota reach one of our goal through going digital. The</p>
+						<a href='#'>Read More ></a>
+					</div>
+				</li>
+			</ul>
+		</div>
+
+
+
+		<! --TESTI VIDEO YT-->
+		<div id='testi'>
+			<div class='testi_kiri'>
+				<h2>Scale up your impact through technology</h2>
+				<div class='tengah'>
+					<div class='tengah_isi'>
+						<h2 style='font-size:25px'>100+</h2>
+						<p>Great Employee and Apps Developer</p>
+					</div>
+					<div class='tengah_isi2'>
+						<h2 style='font-size:25px'>9M</h2>
+						<p>Client & Internal Products Downloaded</p>
+					</div>
+					<div class='tengah_isi3'>
+						<h2 style='font-size:25px'>4.0</h2>
+						<p>Overall App Rating in Google Playstore and Apple Appstore</p>
+					</div>
+				</div>
+			</div>
+			<div class="testi_kanan">
+				<iframe width="550" height="345" src="https://www.youtube.com/embed/bRYdOgPNN7Q">
+				</iframe>
+			</div>
+		</div>
+
+
+
+		<! --TESTIMONI-->
+		<div id='portfolio'>
+			<p style='color:#28A0F6; font-weight:bold'>TESTIMONIALS</p>
+			<div class='services_consult'>
+				<h2 style='font-size:30px; font-weight:bold; text-align:left; float:left;'>What our clients are saying</h2>
+				<button onclick='scrolll_port()' class='tombol3' style='list-style:none; margin-right:4%;'>→</li>
+				<button onclick='scrollr_port()' class='tombol3' style='list-style:none;'>←</li>
+			</div>
+			<ul class='bg_slider2'>
+				<li class='slider2'>
+					<center><img src='testi/oren.png' width='18%'/></center>
+					<h2 style='text-align:center;'>The Apps are Success</h2>
+					<p>GITS.id is our top mind because the apps we build together are success and increase our work efficiency</p>
+					<center><img src='testi/devi.png' width='20%' style='margin-top:-5%'/></center>
+					<p style='color:black; text-align:center; font-weight:bold;'>Devi Christiana</p>
+					<center><a href='#'>Innovation & Performance Marketing Finance  Manager, Danone</a></center>
+				</li>
+				<li class='slider2'>
+					<center><img src='testi/oren.png' width='18%'/></center>
+					<h2 style='text-align:center;'>Recommended</h2>
+					<p>Kereta Api Indonesia would like to recommend GITS.ID to our colleagues <a class='ilang' style='color:white'>----------------------------------------------------</a></p>
+					<center><img src='testi/kai.png' width='20%' style='margin-top:-5%'/></center>
+					<p style='color:black; text-align:center; font-weight:bold;'>Lystiana Tustalilla</p>
+					<center><a href='#'>Business Analyst, KAI</a></center>
+				</li>
+				<li class='slider2'>
+					<center><img src='testi/oren.png' width='18%'/></center>
+					<h2 style='text-align:center;'>Help Clients Reach Target</h2>
+					<p>GITS.id helps Toyota reach one of our goal through going digital. The users are also 98% from the target</p>
+					<center><img src='testi/yoga.png' width='20%' style='margin-top:-5%'/></center>
+					<p style='color:black; text-align:center; font-weight:bold;'>Yoga Pramudia</p>
+					<center><a href='#'>Section Head, Toyota Manufacturing Indonesia</a></center>
+				</li>
+				<li class='slider2'>
+					<center><img src='testi/oren.png' width='18%'/></center>
+					<h2 style='text-align:center;'>Insightful</h2>
+					<p>We like the discussion with GITS.id and eager to develop more features in the application</p>
+					<center><img src='testi/ricky.png' width='20%' style='margin-top:-5%'/></center>
+					<p style='color:black; text-align:center; font-weight:bold;'>Ricky Jefta</p>
+					<center><a href='#'>Head of Sports Science Pocari Sweet, Amerta Indah Indonesia</a></center>
+				</li>
+				<li class='slider2'>
+					<center><img src='testi/oren.png' width='18%'/></center>
+					<h2 style='text-align:center;'>The Apps are Success</h2>
+					<p>Very helpful, easy to reach, fast response, and give creative ideas for our project. We are happy to continue our internship</p>
+					<center><img src='testi/dody.png' width='20%' style='margin-top:-5%'/></center>
+					<p style='color:black; text-align:center; font-weight:bold;'>Dody Agung</p>
+					<center><a href='#'>Project Manager, Jasa Raharja</a></center>
+				</li>
+			</ul>	
+		</div>
+
+
+		<! --RELEASE-->
+		<div id='release'>
+			<p style='color:#28A0F6; color:#FF8B49; text-align: center; font-weight:bold'>PRESS RELEASE</p>
+			<h2 style="text-align: center; margin-top:-5px; font-size:30px; font-weight:bold">We’ve been covered by</h2><br>
+			<ul class='media_release'>
+				<li><a href='#'><img src='release/tribun.png'/></a></li>
+				<li><a href='#'><img src='release/mediaindo.png'/></a></li>
+				<li><a href='#'><img src='release/mnctri.png'/></a></li>
+				<li><a href='#'><img src='release/antara.png'/></a></li>
+				<li><a href='#'><img src='release/industry.png'/></a></li>
+			</ul><br><br>
+			<ul class='media_release'>
+				<li style="color:white">---------</li>
+				<li><a href='#'><img src='release/investor.png'/></a></li>
+				<li><a href='#'><img src='release/sindo.png'/></a></li>
+				<li><a href='#'><img src='release/kompas.png'/></a></li>
+				<li><a href='#'><img src='release/rri.png'/></a></li>
+			</ul>
+		</div>
+
+		
+		<div id='meja' style="position:relative;">
+			<img src='meja.png' width="100%" height='150px'/>
+			<div class='cover'></div>
+		</div>
+
+
+		<div id='contact'>
+			<div class='info'>
+				<p style='color:#28A0F6; font-weight:bold'>CONTACT US</p>
+				<h2 style='font-size:30px; margin-top:-1%; font-weight:bold'>You have a new project?</h2>
+				<p style='margin-top:-2%;'>Come tell us what you need! Fill out this form and our solution team will response to your email by maximum of 2×24 workday. Please be patient and wait for us.</p>
+				<div class="mapouter"><div class="gmap_canvas"><iframe class="gmap_iframe" width="100%" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="https://maps.google.com/maps?width=435&amp;height=303&amp;hl=en&amp;q=gits indonesia&amp;t=&amp;z=14&amp;ie=UTF8&amp;iwloc=B&amp;output=embed"></iframe><a href="https://pdflist.com/" alt="pdflist.com">Pdflist.com</a></div><style>.mapouter{position:relative;text-align:right;width:100%;height:303px;}.gmap_canvas {overflow:hidden;background:none!important;width:100%;height:303px;}.gmap_iframe {height:303px!important;}</style></div>
+				<div class='ket' style='position:relative; margin-top:5%; width:100%'>
+					<div class='ket1' style='margin-right:2%; position:absolute; width:30%; background:none; left:0; top:0'>
+						<img src='ho.jpg' width='50px'/>
+						<h4 style='font-size:15px; margin-top:0%'>Head Office</h4>
+						<p style='font-size:15px; margin-top:-12%;'>Jl. Mars Barat I No 9, Bandung 40286</p>
+					</div>
+					<div class='ket2' style='margin-right:2%; position:absolute; width:30%; background:none; left:34%; top:0'>
+						<img src='email.png' width='30px'/>
+						<h4 style='font-size:15px; margin-top:0%'>Email</h4>
+						<p style='font-size:15px; margin-top:-12%;'>connect@gits.id</p>
+					</div>
+					<div class='ket3' style='margin-right:2%; position:absolute; width:30%; background:none; left:70%; top:0'>
+						<img src='wa.png' width='30px'/>
+						<h4 style='font-size:15px; margin-top:0%'>Whatsapp (Chat Only)</h4>
+						<p style='font-size:15px; margin-top:-12%;'>0811-1309-991</p>
+					</div>
+				</div>
+			</div>
+			<div class='isian'>
+				<form action='#'>
+					<div class='isian1' style='position:relative;'>
+						<p>Your name</p>
+						<input type='text' style='border-radius:4px; margin-top:-2%; width:70%; height:35px;'/>
+						<p>Email Address</p>
+						<input type='email' style='border-radius:4px; margin-top:-2%; width:70%; height:35px;'/>
+					</div>
+					<div class='isian2'>
+						<p>Phone number</p>
+						<input type='text' style='border-radius:4px; margin-top:-2%; width:70%; height:35px;'/>
+						<p>Company</p>
+						<input type='text' style='border-radius:4px; margin-top:-2%; width:70%; height:35px;'/>
+					</div>
+					<p style='color: #7a7a7a'>Message</p>
+					<textarea style='width:70%; height:200px'></textarea><br><br>
+					<input type='submit' value='Send' style='border-radius:5px; width:150px; height:60px; border:none; font-size:20px; color:white; background:#ff8b49;'/>
+				</form>
+			</div>
+
+
+
+			<div id='products'>
+				<p style='color:#FF8B49; font-weight:bold; margin-left:-2%'>OUR PRODUCTS</p>
+				<div class='products_nav'>
+				<button onclick='scrolll_pro()' class='tombol3' style='list-style:none; margin-right:4%;'>→</li>
+				<button onclick='scrollr_pro()' class='tombol3' style='list-style:none;'>←</li>
+				</div>
+				<ul class='isi_products'>
+					<li class='info_products'>
+						<a href='#'><center><img src='products/google.png'/></center></a>
+					</li>
+					<li class='info_products'>
+						<a href='#'><center><img src='products/brandbud.png'/></center></a>
+					</li>
+					<li class='info_products'>
+						<a href='#'><center><img src='products/eudeka.png'/></center></a>
+					</li>
+					<li class='info_products'>
+						<a href='#'><center><img src='products/muslimlife.png'/></center></a>
+					</li>
+					<li class='info_products'>
+						<a href='#'><center><img src='products/cloud.png'/></center></a>
+					</li>
+					<li class='info_products'>
+						<a href='#'><center><img src='products/mofin.png'/></center></a>
+					</li>
+				</ul>
+			</div>
+
+
+
+			<div id='certif'>
+				<p>GITS.id is a Google Certified Agency for Android in 2008, a Google Partner in Google Cloud Platform, have more than 13 years of experienced in IT solutions, give transparency in project, people, and business, have hi-calibre local talented people, build software that deliver business results.</p>
+				<img src='bunders.png'/>
+			</div>
+
+
+			<div id='footer'>
+				<div class='footer1'>
+					<h2>Signup for our newsletter</h2>
+					<p>Keep up with newest technology and business news curated by GITS.id</p>
+				</div>
+				<div class='footer2'>
+					<input type='email' placeholder='Enter email address'/><br>
+					<li class='tombols' style='list-style:none;'><a href='#'>Contact Us!</a></li>
+				</div>
+				<hr style='margin-top:15%; width:97%; border:0.5px solid #575757'>
+				<div class='footer3'>
+					<img src='logo2.png'/>
+					<p><a href='#'>Our works<a> - </a></a><a href='#'>Services<a> - </a></a><a href='#'>Careers<a> - </a></a><a href='#'>About<a> - </a></a><a href='#'>Insight<a> - </a></a><a href='#'>Blog<a></p>
+					<p><a href='#'>Eudeka<a> - </a></a><a href='#'>Mofin<a> - </a></a><a href='#'>Muslimlife<a> - </a></a><a href='#'>Parts of Digit<a> - </a></a><a href='#'>Brandbud</p>
+				</div>
+				<div class='footer4'>
+					<p><a href='#'><img src='sosmed/linked.png'/></a>
+					<a href='#'><img src='sosmed/yt.png'/></a>
+					<a href='#'><img src='sosmed/m.png'/></a>
+					<a href='#'><img src='sosmed/fb.png'/></a>
+					<a href='#'><img src='sosmed/tw.png'/></a>
+					</p>
+					<a href='#'>Privacy & Policy</a><br>
+					<a href='#'>Information Management System Policy</a>
+					<p>Copyright © GITS Indonesia 2022</p>
+				</div>
+			</div>
+	</body>
+	<script>
+		//JAVASCRIPT1
+		window.onscroll = function() {myFunction()};
+		var nav = document.getElementById("nav");
+		var sticky = nav.offsetTop;
+		function myFunction() {
+  			if 	(window.pageYOffset > sticky) {
+    			nav.classList.add("sticky");
+  			} 
+  			else {
+    			nav.classList.remove("sticky");
+  			}
+		}
+
+
+		//JAVASCRIPT2
+		const words = ["Webite", "Mobile", "Application"];
+		let i = 0;
+		let timer;
+		function typingEffect() {
+			let isi_custom = words[i].split("");
+			var loopTyping = function() {
+				if (isi_custom.length > 0) {
+					document.getElementById('isi_custom').innerHTML += isi_custom.shift();
+				} 
+				else {
+					deletingEffect();
+					return false;
+				};
+				timer = setTimeout(loopTyping, 120);
+			};
+			loopTyping();
+		};
+		function deletingEffect() {
+			let isi_custom = words[i].split("");
+			var loopDeleting = function() {
+				if (isi_custom.length > 0) {
+					isi_custom.pop();
+					document.getElementById('isi_custom').innerHTML = isi_custom.join("");
+				} 
+				else {
+					if (words.length > (i + 1)) {
+						i++;
+					} 
+					else {
+						i = 0;
+					};
+					typingEffect();
+					return false;
+				};
+				timer = setTimeout(loopDeleting, 250);
+			};
+			loopDeleting();
+		};
+		typingEffect();
+
+
+		//JAVASCRIPT3
+		function scrolll() {
+			var left = document.querySelector(".bg_slider1");
+			left.scrollBy(350,0);
+		}
+		function scrollr() {
+			var left = document.querySelector(".bg_slider1");
+			left.scrollBy(-350,0);
+		}
+
+
+		//JAVASCRIPT4
+		function scrolll_port() {
+			var left = document.querySelector(".bg_slider2");
+			left.scrollBy(350,0);
+		}
+		function scrollr_port() {
+			var left = document.querySelector(".bg_slider2");
+			left.scrollBy(-350,0);
+		}
+
+
+		//JAVASCRIPT5
+		function scrolll_pro() {
+			var left = document.querySelector(".isi_products");
+			left.scrollBy(350,0);
+		}
+		function scrollr_pro() {
+			var left = document.querySelector(".isi_products");
+			left.scrollBy(-350,0);
+		}
+	</script>
+</HTML>
